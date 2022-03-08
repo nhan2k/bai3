@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" type="button" href="#" data-bs-toggle="modal" data-bs-target="#modalForm">Register</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="CSSgal">
+
+        <!-- Don't wrap targets in parent -->
+        <s id="s1"></s> 
+        <s id="s2"></s>
+        <s id="s3"></s>
+        <s id="s4"></s>
+      
+        <div class="slider">
+          <div style="background:#5b8;">
+      <h2>PURE <b>CSS</b> SLIDESHOW</h2>
+      <p>Responsive Slideshow Gallery created using CSS only<br>by Roko</p>
+      </div>
+          <div style="background:#85b;">
+      <h2>Slide 2</h2>
+      </div>
+          <div style="background:#e95;">
+      <h2>Slide 3</h2>
+      </div>
+          <div style="background:#e59;">
+      <h2>Slide 4</h2>
+      </div>
+        </div>
+        
+        <div class="prevNext">
+          <div><a href="#s4"></a>
+                        <a href="#s2"></a>
+            </div>
+            <div>
+                <a href="#s1"></a>
+                <a href="#s3"></a>
+            </div>
+            <div>
+                <a href="#s2"></a>
+                <a href="#s4"></a>
+            </div>
+            <div>
+                <a href="#s3"></a>
+                <a href="#s1"></a>
+            </div>
+        </div>
+
+        <div class="bullets">
+            <a href="#s1">1</a>
+            <a href="#s2">2</a>
+            <a href="#s3">3</a>
+            <a href="#s4">4</a>
+        </div>
+
+        </div>
+        </header>
+        <div class="container mt-4">
+            <div class="row row-cols-4 mx-auto">
+                <div class="card m-2" style="width: 18rem">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Giày sneaker Nike Air Force 1 Pixel</h5>
+                        <p class="card-text">1.500.000 VND</p>
+                        <a href="#" class="btn btn-primary">Chi tiết</a>
+                        <a href="#" class="btn btn-secondary">Mua</a>
+                    </div>
+                </div>
+                <div class="card m-2" style="width: 18rem">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Giày sneaker Nike Air Force 1 Pixel</h5>
+                        <p class="card-text">1.500.000 VND</p>
+                        <a href="#" class="btn btn-primary">Chi tiết</a>
+                        <a href="#" class="btn btn-secondary">Mua</a>
+                    </div>
+                </div>
+                <div class="card m-2" style="width: 18rem">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Giày sneaker Nike Air Force 1 Pixel</h5>
+                        <p class="card-text">1.500.000 VND</p>
+                        <a href="#" class="btn btn-primary">Chi tiết</a>
+                        <a href="#" class="btn btn-secondary">Mua</a>
+                    </div>
+                </div>
+                <div class="card m-2" style="width: 18rem">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Giày sneaker Nike Air Force 1 Pixel</h5>
+                        <p class="card-text">1.500.000 VND</p>
+                        <a href="#" class="btn btn-primary">Chi tiết</a>
+                        <a href="#" class="btn btn-secondary">Mua</a>
+                    </div>
+                </div>
+                <div class="card m-2" style="width: 18rem">
+                    <img src="data:image/jpeg;base64,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"
+                        class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Giày sneaker Nike Air Force 1 Pixel</h5>
+                        <p class="card-text">1.500.000 VND</p>
+                        <a href="#" class="btn btn-primary">Chi tiết</a>
+                        <a href="#" class="btn btn-secondary">Mua</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Register Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Email Address</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Comfirm Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                            </div>
+                            <div class="modal-footer d-block">
+                                <button type="submit" class="btn btn-warning float-end">
+                  Submit
+                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-light text-muted">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Get connected with us on social networks:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <i class="fas fa-gem me-3"></i>Company name
+                            </h6>
+                            <p>
+                                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+                            <p>
+                                <a href="#!" class="text-reset">Angular</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">React</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Vue</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Laravel</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+                            <p>
+                                <a href="#!" class="text-reset">Pricing</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Settings</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Orders</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Help</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i> info@example.com
+                            </p>
+                            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+                © 2021 Copyright:
+                <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    const $window = $(window);
+const $body = $('body');
+
+class Slideshow {
+constructor (userOptions = {}) {
+    const defaultOptions = {
+      $el: $('.slideshow'),
+      showArrows: false,
+      showPagination: true,
+      duration: 10000,
+      autoplay: true
+    }
+    
+    let options = Object.assign({}, defaultOptions, userOptions);
+    
+this.$el = options.$el;
+this.maxSlide = this.$el.find($('.js-slider-home-slide')).length;
+    this.showArrows = this.maxSlide > 1 ? options.showArrows : false;
+    this.showPagination = options.showPagination;
+this.currentSlide = 1;
+this.isAnimating = false;
+this.animationDuration = 1200;
+this.autoplaySpeed = options.duration;
+this.interval;
+this.$controls = this.$el.find('.js-slider-home-button');
+    this.autoplay = this.maxSlide > 1 ? options.autoplay : false;
+
+this.$el.on('click', '.js-slider-home-next', (event) => this.nextSlide());
+this.$el.on('click', '.js-slider-home-prev', (event) => this.prevSlide());
+    this.$el.on('click', '.js-pagination-item', event => {
+      if (!this.isAnimating) {
+        this.preventClick();
+  this.goToSlide(event.target.dataset.slide);
+      }
+    });
+
+this.init();
+}
+  
+  init() {
+    this.goToSlide(1);
+    if (this.autoplay) {
+      this.startAutoplay();
+    }
+    
+    if (this.showPagination) {
+      let paginationNumber = this.maxSlide;
+      let pagination = '<div class="pagination"><div class="container">';
+      
+      for (let i = 0; i < this.maxSlide; i++) {
+        let item = `<span class="pagination__item js-pagination-item ${ i === 0 ? 'is-current' : ''}" data-slide=${i + 1}>${i + 1}</span>`;
+        pagination  = pagination + item;
+      }
+      
+      pagination = pagination + '</div></div>';
+      
+      this.$el.append(pagination);
+    }
+  }
+  
+  preventClick() {
+this.isAnimating = true;
+this.$controls.prop('disabled', true);
+clearInterval(this.interval);
+
+setTimeout(() => {
+this.isAnimating = false;
+this.$controls.prop('disabled', false);
+      if (this.autoplay) {
+  this.startAutoplay();
+      }
+}, this.animationDuration);
+}
+
+goToSlide(index) {    
+    this.currentSlide = parseInt(index);
+    
+    if (this.currentSlide > this.maxSlide) {
+      this.currentSlide = 1;
+    }
+    
+    if (this.currentSlide === 0) {
+      this.currentSlide = this.maxSlide;
+    }
+    
+    const newCurrent = this.$el.find('.js-slider-home-slide[data-slide="'+ this.currentSlide +'"]');
+    const newPrev = this.currentSlide === 1 ? this.$el.find('.js-slider-home-slide').last() : newCurrent.prev('.js-slider-home-slide');
+    const newNext = this.currentSlide === this.maxSlide ? this.$el.find('.js-slider-home-slide').first() : newCurrent.next('.js-slider-home-slide');
+    
+    this.$el.find('.js-slider-home-slide').removeClass('is-prev is-next is-current');
+    this.$el.find('.js-pagination-item').removeClass('is-current');
+    
+if (this.maxSlide > 1) {
+      newPrev.addClass('is-prev');
+      newNext.addClass('is-next');
+    }
+    
+    newCurrent.addClass('is-current');
+    this.$el.find('.js-pagination-item[data-slide="'+this.currentSlide+'"]').addClass('is-current');
+  }
+  
+  nextSlide() {
+    this.preventClick();
+    this.goToSlide(this.currentSlide + 1);
+}
+   
+prevSlide() {
+    this.preventClick();
+    this.goToSlide(this.currentSlide - 1);
+}
+
+startAutoplay() {
+this.interval = setInterval(() => {
+if (!this.isAnimating) {
+this.nextSlide();
+}
+}, this.autoplaySpeed);
+}
+
+destroy() {
+this.$el.off();
+}
+}
+
+(function() {
+let loaded = false;
+let maxLoad = 3000;  
+  
+function load() {
+const options = {
+      showPagination: true
+    };
+
+    let slideShow = new Slideshow(options);
+}
+  
+function addLoadClass() {
+$body.addClass('is-loaded');
+
+setTimeout(function() {
+$body.addClass('is-animated');
+}, 600);
+}
+  
+$window.on('load', function() {
+if(!loaded) {
+loaded = true;
+load();
+}
+});
+  
+setTimeout(function() {
+if(!loaded) {
+loaded = true;
+load();
+}
+}, maxLoad);
+
+addLoadClass();
+})();
+  </script>
+</html>
